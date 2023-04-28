@@ -1,0 +1,20 @@
+{
+	"fmt": {
+		"options": {
+			"useTabs": true
+		}
+	},
+	"lint": {
+		"rules": {
+			"include": [
+				"prefer-const",
+				"no-inferrable-types",
+				"no-func-assign",
+				"no-extra-semi",
+				"no-extra-non-null-assertion",
+				"no-extra-boolean-cast",
+				"no-explicit-any"
+			]
+		}
+	}
+}

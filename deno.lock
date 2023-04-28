@@ -1,0 +1,6 @@
+{
+  "version": "2",
+  "remote": {
+    "https://deno.land/x/console_colors@v0.0.2/mod.ts": "ea7139db28e3996341d50e19d94edeb41caefaa356864272e5e9c463d287d5af"
+  }
+}
