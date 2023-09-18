@@ -14,9 +14,7 @@ Loxt is a simple and lightweight console logger with 0 external dependencies.
 ---
 
 ```ts
-import Loxt from "loxt";
-
-const loxt = new Loxt();
+import loxt from "loxt";
 
 loxt.start("Some code...");
 loxt.ready("Initialization code, whatever...");

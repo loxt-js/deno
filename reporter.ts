@@ -1,4 +1,4 @@
-/** @module reporter */
+// Copyright 2023 the loxt authors. All rights reserved. MIT license.
 
 /**
  * Helper type of the loxt error
@@ -69,7 +69,7 @@ export class Reporter implements LoxtReporter {
 	 * @see {@link https://loxt.js.org/classes/reporter#error}
 	 */
 	get error(): LoxtError {
-		return this.#options.error ?? { name: "$name", message: "$message" };
+		return this.#options.error ?? { name: "$0", message: "$0" };
 	}
 
 	/**

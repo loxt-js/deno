@@ -1,30 +1,22 @@
-/** @module themes */
+// Copyright 2023 the loxt authors. All rights reserved. MIT license.
 
 import { Reporter } from "./reporter.ts";
-import colors from "https://deno.land/x/console_colors@v0.0.2/mod.ts";
-
-colors;
+import {
+	blue,
+	bold,
+	green,
+	red,
+	yellow,
+} from "https://deno.land/std@0.111.0/fmt/colors.ts";
 
 export const salmon = new Reporter({
-	info: `${"info".blue.text_bold}: ${"$message".text_dim}`,
-	warn: `${"warning".yellow.text_bold}: ${"$message".text_dim}}`,
-	ready: `${"ready".green} ${"$message".text_dim}`,
-	start: `${"start"} ${"$message".text_dim}`,
-	success: `${"success".green.text_bold}: ${"$message".text_dim}`,
+	info: `${blue(bold("info"))}: $0`,
+	warn: `${yellow(bold("warning"))}: $0`,
+	ready: `${green("ready")} $0`,
+	start: `${green("start")} $0`,
+	success: `${green(bold("success"))}: $0`,
 	error: {
-		name: "$name".red.text_bold,
-		message: "$message".text_dim,
-	},
-});
-
-export const smoked = new Reporter({
-	info: `${" info ".bg_blue.text_bold} ${"$message".blue}`,
-	warn: `${" warning ".bg_yellow.text_bold} ${"$message".yellow}`,
-	ready: `${" ready ".bg_green.text_bold} ${"$message".green}`,
-	start: `${" start ".bg_green.text_bold} ${"$message".green}`,
-	success: `${" success ".bg_green.text_bold} ${"$message".green}`,
-	error: {
-		name: " $name ".bg_red.text_bold,
-		message: "$message".red,
+		name: red(bold("$0")),
+		message: "$0",
 	},
 });

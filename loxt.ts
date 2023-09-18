@@ -1,4 +1,4 @@
-/** @module loxt */
+// Copyright 2023 the loxt authors. All rights reserved. MIT license.
 
 import type { Reporter } from "./reporter.ts";
 import { salmon } from "./themes.ts";
@@ -11,6 +11,7 @@ import { format } from "./utils.ts";
  * @property {Reporter} reporter - Defined behaviour and looks of logging.
  * @see {@link https://loxt.js.org/classes/loxt}
  */
+
 export class Loxt {
 	reporter: Reporter;
 
@@ -70,10 +71,7 @@ export class Loxt {
 		const { name, message } = this.reporter.error;
 
 		if (!(error instanceof Error)) {
-			8;
-			console.error(
-				`${format(name, "error")}: ${format(message, error)}`,
-			);
+			console.error(`${format(name, "error")}: ${format(message, error)}`);
 			return;
 		}
 
@@ -105,7 +103,7 @@ export class Loxt {
 	/**
 	 * Generates a new loxt instance with the same settings as this instance
 	 * @returns the new instance with the reporter of this instance
-	 * @see {@link https://loxt.js.org/classes/loxt#clone}
+	 * @see {@link https://deno.land/x/loxt@v3.11.7/mod.ts?s=Loxt&p=prototype.clone}
 	 */
 	clone(): Loxt {
 		return new Loxt(this.reporter);
