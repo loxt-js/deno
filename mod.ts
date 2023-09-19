@@ -18,7 +18,12 @@
  * @module
  */
 
-export { Loxt, loxt as default } from "./loxt.ts";
+import { Loxt } from "./loxt.ts";
+
+/** Default instance of loxt. */
+export default new Loxt();
+
+export { Loxt };
 export { salmon } from "./themes.ts";
-export { Reporter } from "./reporter.ts";
+export { type LoxtError, type LoxtReporter, Reporter } from "./reporter.ts";
 export { format } from "./utils.ts";
